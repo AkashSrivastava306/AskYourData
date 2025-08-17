@@ -41,13 +41,9 @@ if uploaded_file:
     else:
         df = pd.read_excel(uploaded_file)
 
-    # Clean dataset
     df.drop_duplicates(inplace=True)
     df.fillna(0, inplace=True)
 
-    # ------------------------------
-    # Fix PyArrow serialization issue
-    # ------------------------------
     for col in df.select_dtypes(include=['object']).columns:
         df[col] = df[col].astype(str)
 
@@ -60,26 +56,6 @@ if uploaded_file:
     # ------------------------------
     show_dataset_stats_dropdown(df)
     
-    # ------------------------------
-    # User query input for AI agents
-    # ------------------------------
-    # query = st.text_input("Ask me anything about your dataset:")
-    # if query:
-    #     response = supervisor.run(query, dataset_info, df)
 
-    #     # Display response
-    #     if response.get("agent") == "Code Agent":
-    #         st.subheader("🖥️ Generated Code")
-    #         st.code(response["code"], language="python")
-
-    #         st.subheader("✅ Execution Result")
-    #         st.write(response["result"])
-
-    #         if response["fig"] is not None:
-    #             st.subheader("📊 Plot Output")
-    #             st.pyplot(response["fig"])
-
-    #     elif response.get("agent") == "QA Agent":
-    #         st.subheader("💡 Answer from QA Agent")
-    #         st.write(response["explanation"])
             
+

@@ -31,7 +31,7 @@ supervisor = SupervisorAgent(llm, code_agent, qa_agent, intent_agent)
 # ------------------------------
 # Streamlit UI
 # ------------------------------
-st.title("🧠 Data Analyst AI Agent")
+st.title("Ask Your Data")
 
 # File upload
 uploaded_file = st.file_uploader("Upload your CSV/XLSX file", type=["csv", "xlsx"])
@@ -58,4 +58,5 @@ if uploaded_file:
     
 
             
+
 

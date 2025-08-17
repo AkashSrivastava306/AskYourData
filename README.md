@@ -26,9 +26,11 @@ It executes Python code, performs data analysis, and visualizes insights — all
 ## 📂 Project Structure
 ```
 project-root/
-│── app.py              # Main Flask app
-│── utility_tool.py     # Core pipeline for code execution & plotting
+│── run.py              # Main streamlit app
+│── multi_agent.py      # Multi agent 
 │── requirements.txt    # Dependencies
+│── stats_agent.py      # State agent 
+│── supervisor.py       # Supervisor agent who handle every agent
 │── README.md           # Documentation
 ```
 
@@ -38,7 +40,7 @@ project-root/
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/your-username/askyourdata.git
+git clone https://github.com/AkashSrivastava306/askyourdata.git
 cd askyourdata
 ```
 
@@ -61,7 +63,7 @@ GROQ_API_KEY=your_groq_api_key
 
 5. Run the app:
 ```bash
-python app.py
+streamlit run run.py
 ```
 
 ---

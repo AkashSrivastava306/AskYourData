@@ -1,0 +1,14 @@
+numpy
+pandas
+matplotlib
+wordcloud
+seaborn
+langchain
+langgraph
+langchain_groq
+python-dotenv
+langchain_community
+tiktoken
+groq
+pydantic
+streamlit

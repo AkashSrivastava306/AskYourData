@@ -17,7 +17,7 @@ import os
 import streamlit as st
 GROQ_API_KEY = st.secrets.get("GROQ_API_KEY")
 
-llm = ChatGroq(api_key=groq_api_key, model="gemma2-9b-it")
+llm = ChatGroq(api_key=GROQ_API_KEY, model="gemma2-9b-it")
 
 # Initialize agents
 code_agent = CodeAgent(llm)

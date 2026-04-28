@@ -14,11 +14,8 @@ import os
 # ------------------------------
 # Load environment & initialize LLM
 # ------------------------------
-load_dotenv()
-groq_api_key = os.getenv("GROQ_API_KEY")
-if not groq_api_key:
-    st.error("GROQ_API_KEY not found in .env")
-    st.stop()
+import streamlit as st
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY")
 
 llm = ChatGroq(api_key=groq_api_key, model="gemma2-9b-it")
 

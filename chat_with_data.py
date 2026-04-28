@@ -10,7 +10,7 @@ import streamlit as st
 GROQ_API_KEY = st.secrets.get("GROQ_API_KEY")
 
 
-llm = ChatGroq(api_key=GROQ_API_KEY, model="gemma2-9b-it")
+llm = ChatGroq(api_key=GROQ_API_KEY, model="llama-3.3-70b-versatile")
 
 def sanitize_dataframe(df):
     """Convert problematic object columns to strings so Streamlit can handle them."""

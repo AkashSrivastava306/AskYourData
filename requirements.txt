@@ -5,7 +5,7 @@ pandas
 matplotlib
 wordcloud
 seaborn
-
+openpyxl
 langgraph
 langchain_groq
 python-dotenv
